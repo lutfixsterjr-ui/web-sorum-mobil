@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TURISMO | Sportcar, SUV & Sedan Premium</title>
+<meta name="description" content="Showroom mobil premium: GT3 RS, Macan, dan Panamera.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="progress" id="progress"></div>
+
+<header class="top">
+  <div class="wrap bar">
+    <a href="#" class="logo">TURISMO<i>.</i></a>
+    <nav>
+      <a href="#koleksi" data-go="all">Home</a>
+      <a href="#koleksi" data-go="sportcar">Sportcar</a>
+      <a href="#koleksi" data-go="suv">SUV</a>
+      <a href="#koleksi" data-go="sedan">Sedan</a>
+    </nav>
+    <div class="right">
+      <button class="acct" id="acct">Masuk</button>
+      <button class="cart-btn" id="open-cart" aria-label="Buka keranjang">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 7h12l1 13H5L6 7zM9 7a3 3 0 016 0"/></svg>
+        <b id="cart-count" hidden>0</b>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="hero" aria-label="Mobil unggulan"></section>
+
+<section class="marquee" aria-hidden="true"><div class="marquee-track">
+  <div><span>SPORTCAR</span><i>●</i><span>SUV</span><i>●</i><span>SEDAN</span><i>●</i><span>GARANSI RESMI</span><i>●</i><span>PEMESANAN ONLINE</span><i>●</i><span>TEST DRIVE</span><i>●</i><span>LAYANAN PURNAJUAL</span><i>●</i></div>
+  <div><span>SPORTCAR</span><i>●</i><span>SUV</span><i>●</i><span>SEDAN</span><i>●</i><span>GARANSI RESMI</span><i>●</i><span>PEMESANAN ONLINE</span><i>●</i><span>TEST DRIVE</span><i>●</i><span>LAYANAN PURNAJUAL</span><i>●</i></div>
+</div></section>
+
+<section class="wrap sect" id="kategori">
+  <div class="center"><p class="eyebrow">KATEGORI</p><h2>PILIH GAYAMU</h2><p class="lead">Tiga karakter berbeda, satu standar kualitas yang sama.</p></div>
+  <div class="cats" id="cats"></div>
+</section>
+
+<section class="wrap sect" id="preview">
+  <div class="center"><p class="eyebrow">PREVIEW</p><h2>LIHAT DARI DEKAT</h2><p class="lead">Pilih kategori untuk melihat mobilnya meluncur masuk.</p></div>
+  <div class="tabs center-tabs" id="sc-tabs" role="tablist">
+    <button data-s="sportcar" class="on">SPORTCAR</button><button data-s="suv">SUV</button><button data-s="sedan">SEDAN</button>
+  </div>
+  <div class="showcase" id="showcase" aria-live="polite"></div>
+</section>
+
+<section class="wrap" id="koleksi">
+  <div class="head">
+    <div><p class="eyebrow">INVENTORY</p><h2>THE COLLECTION</h2></div>
+    <input id="search" type="search" placeholder="Cari model…" aria-label="Cari model">
+  </div>
+  <div class="tabs" id="tabs" role="tablist">
+    <button data-f="all" class="on">SEMUA MODEL</button>
+    <button data-f="sportcar">SPORTCAR</button>
+    <button data-f="suv">SUV</button>
+    <button data-f="sedan">SEDAN</button>
+  </div>
+  <div class="grid" id="grid"></div>
+  <p class="empty" id="empty" hidden>Model tidak ditemukan. Coba kata kunci lain.</p>
+</section>
+
+<section class="why">
+  <div class="wrap">
+    <p class="eyebrow">KENAPA TURISMO</p>
+    <h2>BELI MOBIL,<br>TANPA RIBET.</h2>
+    <div class="feat">
+      <div><span class="n">01</span><h3>Unit terkurasi</h3><p>Hanya model pilihan dari tiga kategori terbaik: Sportcar, SUV, dan Sedan.</p></div>
+      <div><span class="n">02</span><h3>Pesan online</h3><p>Pilih model, masukkan ke keranjang, dan buat pesanan dalam hitungan menit.</p></div>
+      <div><span class="n">03</span><h3>Struk digital</h3><p>Setiap pesanan punya kode unik dan struk yang bisa dicetak atau disimpan PDF.</p></div>
+      <div><span class="n">04</span><h3>Ulasan pembeli</h3><p>Baca dan tulis ulasan tiap model sebelum menentukan pilihan.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap cta-wrap">
+  <div class="cta">
+    <span class="mark" aria-hidden="true">T</span>
+    <div><h2>SIAP MENEMUKAN<br>MOBIL IMPIANMU?</h2><p>Buat akun gratis untuk menulis ulasan dan memantau pesananmu.</p></div>
+    <div class="cta-btns" id="cta-btns"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap fcols">
+    <div class="fbrand"><span class="logo">TURISMO<i>.</i></span><p>Showroom mobil premium untuk pencinta performa dan kenyamanan. Pilih Sportcar, SUV, atau Sedan impianmu dan pesan langsung secara online.</p></div>
+    <div><h4>KOLEKSI</h4><a href="#koleksi" data-go="sportcar">Sportcar Series</a><a href="#koleksi" data-go="suv">SUV Series</a><a href="#koleksi" data-go="sedan">Sedan Series</a></div>
+    <div><h4>AKUN</h4><a href="#" data-auth="login">Login</a><a href="#" data-auth="register">Register</a><a href="#" id="foot-cart">Keranjang</a></div>
+  </div>
+  <div class="fbar"><div class="wrap">© <span id="yr"></span> TURISMO. ALL RIGHTS RESERVED. Website TUGAS UNPAM LUTFI HIDAYATULLAH.</div></div>
+</footer>
+
+<dialog id="detail"></dialog>
+
+<dialog id="cart" class="drawer">
+  <div class="drawer-in">
+    <div class="drawer-head"><h3>Keranjang</h3><button class="x" data-close aria-label="Tutup">✕</button></div>
+    <div id="cart-body"></div>
+  </div>
+</dialog>
+
+<dialog id="auth" class="modal">
+  <div class="modal-in">
+    <div class="drawer-head"><h3>Akun TURISMO</h3><button class="x" data-close aria-label="Tutup">✕</button></div>
+    <div class="tabs" id="auth-tabs"><button data-a="login" class="on">Masuk</button><button data-a="register">Daftar</button></div>
+
+    <form id="login-form">
+      <label for="li-email">EMAIL</label><input id="li-email" type="email" autocomplete="email" required>
+      <label for="li-pass">PASSWORD</label><input id="li-pass" type="password" autocomplete="current-password" required>
+      <button class="btn dark">Masuk</button>
+    </form>
+
+    <form id="reg-form" hidden>
+      <label for="rg-name">NAMA LENGKAP</label><input id="rg-name" autocomplete="name" required>
+      <label for="rg-email">EMAIL</label><input id="rg-email" type="email" autocomplete="email" required>
+      <label for="rg-pass">PASSWORD (MIN. 8 KARAKTER)</label><input id="rg-pass" type="password" minlength="8" autocomplete="new-password" required>
+      <label for="rg-pass2">ULANGI PASSWORD</label><input id="rg-pass2" type="password" minlength="8" autocomplete="new-password" required>
+      <button class="btn dark">Buat akun</button>
+    </form>
+
+    <p class="err" id="auth-err" role="alert"></p>
+    <p class="note">Mode demo: akun hanya disimpan di browser ini, bukan di server. Jangan memakai password yang kamu pakai di tempat lain.</p>
+  </div>
+</dialog>
+
+<dialog id="receipt" class="modal wide"><div class="modal-in" id="receipt-body"></div></dialog>
+
+<dialog id="profile" class="modal"><div class="modal-in" id="profile-body"></div></dialog>
+
+<div id="print-area" aria-hidden="true"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
